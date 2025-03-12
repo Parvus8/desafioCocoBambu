@@ -1,2 +1,52 @@
-# desafioCocoBambu
+# desafio Coco Bambu
 repositório criado para realização da etapa do desafio técnico proposto
+
+# Identficação e explicação dos principais fluxos encontrados 
+
+
+# 1. Fluxo de Localização de Endereço: 
+
+## 1.1 - Por que é essencial?
+No contexto de uma plataforma de delivery, como a do Coco Bambu, a localização do cliente é o ponto de partida para oferecer produtos disponíveis na região, calcular prazos de entrega e definir taxas de frete. Se esse fluxo não funcionar corretamente, o cliente pode não conseguir avançar para a seleção de produtos ou finalizar a compra.
+
+
+## 1.2 - Precisão na entrega: 
+Um sistema de localização eficiente garante que o endereço do cliente seja identificado corretamente, evitando erros de entrega.
+
+
+## 1.3 - Disponibilidade de produtos: 
+A localização auxilia a determinar quais produtos estão disponíveis para o cliente, com base na região e no restaurante mais próximo.
+
+
+## 1.4 - Experiência do usuário: 
+Um fluxo de localização intuitivo e rápido melhora a satisfação do cliente, enquanto um processo complicado ou impreciso pode levar ao abandono da plataforma nos primeiros estágios da visita a plataforma.
+
+
+
+# 2 - Fluxo de Seleção de Produtos e Adição ao Carrinho:
+
+## 2.1 - Por que é essencial?
+Este é o primeiro passo para o cliente interagir com a plataforma e escolher os produtos que deseja comprar. Se houver problemas nesse fluxo, como dificuldade em navegar pelo menu, produtos indisponíveis sem aviso claro, ou falhas ao adicionar itens ao carrinho, o cliente pode desistir da compra.
+
+
+## 2.2 - Caso de falhas técnicas: 
+Se o cliente não consegue encontrar ou selecionar os produtos que deseja, ele pode abandonar o site.
+
+
+## 2.3 - Perda de vendas: 
+Qualquer obstáculo nesse fluxo pode resultar em uma compra abandonada, consequentemente não finalizada.
+
+
+
+# 3 - Fluxo de Finalização de Pedido (Checkout):
+
+## 3.1 - Por que é essencial?
+O checkout é o momento crucial onde o cliente finaliza a compra. Problemas nessa etapa, como falhas no preenchimento de endereço, seleção de pagamento, ou cálculo de frete, podem levar ao abandono do carrinho.
+
+
+## 3.2 - Complexidade: 
+Se o processo de checkout for muito complicado ou demorado, o cliente pode desistir.
+
+
+## 3.3 - Caso de falhas técnicas: 
+Erros no processamento de pagamento ou na aplicação de cupons de desconto podem frustrar o cliente e impedir a conclusão da compra.
