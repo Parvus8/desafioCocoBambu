@@ -1,0 +1,5 @@
+{
+    "validAddress": "Avenida Paulista, 1000, São Paulo",
+    "invalidAddress": "Rua Inexistente 123456",
+    "outOfCoverageAddress": "Rio de Janeiro, Copacabana"
+}
