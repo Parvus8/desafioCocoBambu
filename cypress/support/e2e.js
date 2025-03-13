@@ -2,6 +2,7 @@
 import './commands';
 
 beforeEach(() => {
+    cy.clearCookies();
   // Ignora exceções não capturadas (útil para evitar falhas em erros não críticos)
   Cypress.on('uncaught:exception', (err) => {
     console.error('Exceção não capturada:', err.message);
