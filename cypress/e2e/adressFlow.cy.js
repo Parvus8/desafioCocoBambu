@@ -25,8 +25,8 @@ describe('Fluxo de Localização de Endereço', () => {
           .type('%%%%###@@@123456');
     
         // Valida a mensagem de erro
-        cy.get('.address-subtitle')
-          .should('not.exist');
+        cy.get('.address-title')
+          .should('contain', 'Usar localização atual');
       });
     
   

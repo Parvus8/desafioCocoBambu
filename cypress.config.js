@@ -3,7 +3,7 @@ const { defineConfig } = require('cypress');
 module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://app-hom.cocobambu.com/',
-    setupNodeEvents(on, config) {
+    setupNodeEvents(on) {
         on('task', {
             log(message) {
               console.log(message);
@@ -19,4 +19,3 @@ module.exports = defineConfig({
     screenshotOnRunFailure: true,
   },
 });
-//TODO: documentar configs

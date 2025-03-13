@@ -3,7 +3,7 @@
 describe('Testes de API para o Carrinho', () => {
     beforeEach(() => {
       // Carrega os dados de teste do arquivo de fixtures
-      cy.fixture('cartData').as('cartData');
+      cy.fixture('carrinhoData').as('cartData');
     });
   
     it('Deve adicionar itens ao carrinho usando fixtures', function () {
@@ -18,7 +18,7 @@ describe('Testes de API para o Carrinho', () => {
         body: addCart,
       }).then((response) => {
         // Validações
-        expect(response.status).to.eq(200);
+        expect(response.status).to.eq(201);
         expect(response.body.products).to.have.length(addCart.products.length);
       });
     });
