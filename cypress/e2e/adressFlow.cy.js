@@ -5,14 +5,17 @@ describe('Fluxo de Localização de Endereço', () => {
   
     it('Deve localizar um endereço válido', () => {
       // Insere um endereço válido e seleciona a primeira sugestão
-      cy.get('[data-cy="address-input"]')
-        .type('Avenida Paulista, 1000, São Paulo')
-        .wait(500); // Aguarda carregamento das sugestões
-  
-      // Seleciona a primeira sugestão da lista
-      cy.get('[data-cy="address-suggestion"]')
-        .first()
-        .click();
+      cy.get('[data-cy="search-address-input"]')
+      .type('Avenida Paulista, 1000, São Paulo');
+
+    // Aguarda carregamento das sugestões
+    cy.get('[data-cy="address-suggestion"]', { timeout: 10000 })
+      .should('be.visible');
+
+    // Seleciona a primeira sugestão da lista
+    cy.get('[data-cy="address-suggestion"]')
+      .first()
+      .click();
   
       // Verifica se o endereço foi confirmado
       cy.get('[data-cy="confirmed-address"]')
