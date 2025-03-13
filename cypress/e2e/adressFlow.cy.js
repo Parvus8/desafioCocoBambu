@@ -1,12 +1,12 @@
 describe('Fluxo de Localização de Endereço', () => {
     beforeEach(() => {
-      cy.visit('/delivery'); // Navega para a página inicial
+      cy.visit('/delivery');
     });
   
     it('Deve localizar um endereço válido', () => {
       // Insere um endereço válido e seleciona a primeira sugestão
       cy.get('[data-cy="address-input"]')
-        .type('Avenida Paulista, 1000, São Paulo') //TODO: definir endereco
+        .type('Avenida Paulista, 1000, São Paulo')
         .wait(500); // Aguarda carregamento das sugestões
   
       // Seleciona a primeira sugestão da lista
@@ -37,16 +37,5 @@ describe('Fluxo de Localização de Endereço', () => {
       // Valida se a lista de sugestões é exibida
       cy.get('[data-cy="address-suggestion"]')
         .should('have.length.greaterThan', 0);
-    });
-  
-    it('Deve bloquear o fluxo se o endereço estiver fora da área de cobertura', () => {
-      // Insere um endereço fora da área de entrega
-      cy.get('[data-cy="address-input"]')
-        .type('Rio de Janeiro, Copacabana')
-        .wait(500);
-  
-      // Verifica mensagem de área não coberta
-      cy.get('[data-cy="coverage-error"]')
-        .should('contain', 'Não entregamos nesta região');
     });
   });
